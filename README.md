@@ -4,8 +4,8 @@ Presentation about potential issues when using optional properties in Typescript
 
 The actual HTML version of the presentation is generated from Markdown using [Marp](https://marp.app/).
 
-- [HTML Version](./generated/index.html)
-- [PDF Version](./generated/optional-properties-in-ts.pdf)
+- [HTML Version](./index.html)
+- [PDF Version](./optional-properties-in-ts.pdf)
 
 # Editing the presentation
 
