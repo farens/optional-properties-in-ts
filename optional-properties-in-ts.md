@@ -249,7 +249,7 @@ console.log(hasCancelled(bob)); // false
 # Suggestion #4
 
 When using the `in` operator to assert the presence of an optional property on an object,
-think twice if you don't assert for not `undefined` instead.
+think twice if you should assert for not `undefined` instead.
 
 ---
 
