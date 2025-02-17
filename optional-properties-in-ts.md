@@ -207,6 +207,25 @@ console.log(hasCancelled(bob)); // true
 
 ---
 
+# Avoiding the error #4
+
+Best approach as long as modifying the type `User` is not an option.
+
+```typescript
+const buildUser = (email: string, cancellationDate?: string): User => {
+  return {
+    email,
+    ...(cancellationDate !== undefined && { cancellationDate }),
+  };
+};
+```
+
+- 😀 No compiler error
+- 😀 Assigning `email` isn't duplicated.
+- 😀 Added complexity is acceptable.
+
+---
+
 # Suggestion #1
 
 The [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator) should be used more carefully! It's not a `It's going to be fine` operator. It means: "Hey compiler, you cannot know, but i did ensure in a way you cannot see that it's never going to the undefined".
